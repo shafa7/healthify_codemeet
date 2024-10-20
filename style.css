@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 20%;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.menu {
+    list-style-type: none;
+}
+
+.menu li {
+    margin-bottom: 20px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+
+.user {
+    position: absolute;
+    bottom: 30px;
+    text-align: center;
+}
+
+.user img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.main-content {
+    width: 60%;
+    padding: 20px;
+}
+
+header {
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.intake {
+    display: flex;
+    justify-content: space-between;
+}
+
+.intake-stats {
+    display: flex;
+    gap: 10px;
+}
+
+.stat {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 30%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.stat h2 {
+    font-size: 18px;
+}
+
+.stat p {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.progress {
+    height: 10px;
+    background-color: #4CAF50;
+    border-radius: 5px;
+}
+
+.intake-graph {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 60%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.hydration-tips {
+    margin-top: 20px;
+}
+
+.tips {
+    display: flex;
+    gap: 10px;
+}
+
+.tip {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 30%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.right-panel {
+    width: 20%;
+    padding: 20px;
+}
+
+.hydration-reminder {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.drink-log {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.drink-log ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.drink-log li {
+    padding: 10px 0;
+    border-bottom: 1px solid #f1f1f1;
+}

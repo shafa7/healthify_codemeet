@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Intake</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <div class="logo">HEALTHIFY</div>
+            <ul class="menu">
+                <li><a href="medicine.html">Medicine</a></li>
+                <li><a href="index.html">Water Intake</a></li>
+                <li><a href="main.html">Meal Suggestions</a></li>
+                <li><a href="track">Menstrual Tracker</a></li>
+            </ul>
+            <div class="user">
+                <img src="images/userr.png" alt="User" class="user-img">
+                <p>User</p>
+                <p>user@xyz.com</p>
+            </div>
+        </nav>
+
+        <div class="main-content">
+            <header>
+                <h1>Welcome back, User!</h1>
+                <p>It's a Sunny Day today! Don't forget to take your water bottle with you.</p>
+                <div class="weather">26°C</div>
+            </header>
+
+            <section class="intake">
+                <div class="intake-stats">
+                    <div class="stat">
+                        <h2>Daily Intake</h2>
+                        <p>5000 ml</p>
+                        <div class="progress" style="width: 80%;"></div>
+                    </div>
+                    <div class="stat">
+                        <h2>Average Intake</h2>
+                        <p>2500 ml</p>
+                        <div class="progress" style="width: 85%;"></div>
+                    </div>
+                    <div class="stat">
+                        <h2>Total Intake</h2>
+                        <p>17000 ml</p>
+                        <div class="progress" style="width: 68%;"></div>
+                    </div>
+                </div>
+
+                <div class="intake-graph">
+                    <h2>Glass Intake - 200 ml</h2>
+                    <canvas id="intakeChart" width="400" height="150"></canvas>
+                </div>
+            </section>
+
+            <section class="hydration-tips">
+                <h2>Hydration Tips</h2>
+                <div class="tips">
+                    <div class="tip">
+                        <h3>Watermelon</h3>
+                        <p>It contains 97% water in it. A good choice to stay hydrated.</p>
+                    </div>
+                    <div class="tip">
+                        <h3>Oranges</h3>
+                        <p>It contains 72% water in it. Its tangy nature helps with skin care.</p>
+                    </div>
+                    <div class="tip">
+                        <h3>Grapes</h3>
+                        <p>It contains vitamin "C" which helps with retaining water.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <aside class="right-panel">
+            <div class="hydration-reminder">
+                <img src="images/bottle.png" alt="Water Bottle">
+                <h3>Stay Hydrated and beat the heat.</h3>
+                <p>Intake Goal: 18000 ml / 25000 ml</p>
+            </div>
+
+            <div class="drink-log">
+                <h3>Drink Log</h3>
+                <ul>
+                    <li>250 ml - 8:00 AM</li>
+                    <li>200 ml - 9:30 AM</li>
+                    <li>500 ml - 11:00 AM</li>
+                    <li>200 ml - 1:00 PM</li>
+                    <li>250 ml - 3:00 PM</li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+
+var ctx = document.getElementById('intakeChart').getContext('2d');
+var intakeChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['6 am', '8 am', '10 am', '12 pm', '2 pm', '4 pm', '6 pm', '8 pm'],
+        datasets: [{
+            label: 'Glass 1',
+            data: [200, 300, 250, 400, 300, 250, 200, 300],
+            backgroundColor: 'rgba(75, 192, 192, 0.6)'
+        }, {
+            label: 'Glass 2',
+            data: [250, 300, 200, 300, 250, 400, 350, 200],
+            backgroundColor: 'rgba(153, 102, 255, 0.6)'
+        }, {
+            label: 'Glass 3',
+            data: [150, 200, 250, 300, 250, 300, 200, 400],
+            backgroundColor: 'rgba(255, 159, 64, 0.6)'
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+</script>
+
+</body>
+</html>

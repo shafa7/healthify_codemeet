@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet and Meal Tracker</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <div class="logo">HEALTHIFY</div>
+            <ul class="menu">
+                <li><a href="medicine.html">Medicine</a></li>
+                <li><a href="index.html">Water Intake</a></li>
+                <li><a href="main.html">Meal Suggestions</a></li>
+                <li><a href="track.html">Menstrual Tracker</a></li>
+            </ul>
+            <div class="user">
+                <img src="images/userr.png" alt="User" class="user-img">
+                <p>User</p>
+                <p>user@xyz.com</p>
+            </div>
+        </nav>
+    <div class="container1">
+        <header>
+            <h1>Diet and Meal Tracker</h1>
+            <input type="date" id="mealDate" onchange="loadMealPlan()" />
+        </header>
+
+        <section class="meal-plan">
+            <h2>Meal Plan for <span id="selectedDate">Today</span></h2>
+
+            <div class="meal" id="breakfast">
+                <h3>Breakfast</h3>
+                <div class="details">
+                    <p>Ingredients: <span id="breakfastIngredients">Oats, Milk, Banana</span></p>
+                    <p>Energy: <span id="breakfastEnergy">350 kcal</span></p>
+                    <p>Nutrients: <span id="breakfastNutrients">Protein: 10g, Carbs: 50g, Fats: 10g</span></p>
+                </div>
+            </div>
+
+            <div class="meal" id="lunch">
+                <h3>Lunch</h3>
+                <div class="details">
+                    <p>Ingredients: <span id="lunchIngredients">Chicken, Rice, Salad</span></p>
+                    <p>Energy: <span id="lunchEnergy">600 kcal</span></p>
+                    <p>Nutrients: <span id="lunchNutrients">Protein: 30g, Carbs: 60g, Fats: 15g</span></p>
+                </div>
+            </div>
+
+            <div class="meal" id="snacks">
+                <h3>Snacks</h3>
+                <div class="details">
+                    <p>Ingredients: <span id="snackIngredients">Almonds, Apple</span></p>
+                    <p>Energy: <span id="snackEnergy">200 kcal</span></p>
+                    <p>Nutrients: <span id="snackNutrients">Protein: 5g, Carbs: 25g, Fats: 10g</span></p>
+                </div>
+            </div>
+
+            <div class="meal" id="dinner">
+                <h3>Dinner</h3>
+                <div class="details">
+                    <p>Ingredients: <span id="dinnerIngredients">Fish, Vegetables</span></p>
+                    <p>Energy: <span id="dinnerEnergy">450 kcal</span></p>
+                    <p>Nutrients: <span id="dinnerNutrients">Protein: 25g, Carbs: 40g, Fats: 20g</span></p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="meal.js"></script>
+</body>
+</html>
